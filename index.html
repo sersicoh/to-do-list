@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/_normalize.css">
     <link rel="stylesheet" href="css/baseStyles.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/list.css">
     <script src="js/executor.js" defer></script>
     <title>Document</title>
 </head>
-<body>
-    <form class="js-form">
-        <input class="js-newTask">
-        <button>Dodaj zadanie</button>
-    </form>
-    <ul class="js-tasks"></ul>
+
+<body class="body">
+    <h1 class="header">Lista zadań</h1>
+    <div class="sections">
+        <section class="form">
+                <h2 class="form__header">Dodaj nowe zadanie</h2>
+            <form class="form__input js-form">
+                <input class="js-newTask" placeholder="Co jest do zrobienia?">
+                <button class="form__button">Dodaj zadanie</button>
+            </form>
+        </section>
+        <section class="list">
+            <h2 class="list__header">Lista zadań</h2>
+            <ul class="list__item js-tasks"></ul>
+        </section>
+    </div>
+
 </body>
+
 </html>
