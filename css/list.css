@@ -31,3 +31,6 @@
 .list__buttons--done{
     background-color: green;
 }
+.list__content--done{
+    text-decoration-line: line-through;
+}

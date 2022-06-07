@@ -1,23 +1,26 @@
 {
-    // ✔
     const tasks = [{
         content: "test",
     }
     ];
-
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
+            done:false,
         });
         render();
     };
+    const doneButtonToggle = (index) => {
+        tasks[index].done = !tasks[index].done
+        render();
+      };
     const checkDoneTask = () => {
 
         const doneButtons = document.querySelectorAll(".js-done");
 
         doneButtons.forEach((doneButton, index) => {
             doneButton.addEventListener("click", () => {
-                console.log("zrobione " + index);
+                doneButtonToggle(index);
                 render();
             })
         });
@@ -51,8 +54,8 @@
 
             htmlString += `
             <li class="list__newTask">
-                <button class="list__buttons list__buttons--done js-done">Zrobione</button>
-                ${task.content}
+                <button class="list__buttons list__buttons--done js-done">${task.done ? "✔" : ""}</button>
+                <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
                 <button class="list__buttons list__buttons--remove js-remove">🗑</button>
             </li>`
         };
