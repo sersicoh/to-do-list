@@ -18,3 +18,16 @@
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
+.list__buttons{
+    color: white;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.list__buttons--remove{
+    background-color: red;
+}
+.list__buttons--done{
+    background-color: green;
+}

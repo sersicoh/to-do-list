@@ -1,4 +1,5 @@
 {
+    // ✔
     const tasks = [{
         content: "test",
     }
@@ -50,9 +51,9 @@
 
             htmlString += `
             <li class="list__newTask">
-                <button class="js-done">Zrobione</button>
+                <button class="list__buttons list__buttons--done js-done">Zrobione</button>
                 ${task.content}
-                <button class="js-remove">Usuń</button>
+                <button class="list__buttons list__buttons--remove js-remove">🗑</button>
             </li>`
         };
 
