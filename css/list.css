@@ -1,6 +1,6 @@
 .list{
     background-color: white;
-    
+
 }
 .list__header{
     border-bottom: 1px solid #ccc;
@@ -11,12 +11,14 @@
     padding: 20px;
     margin: 0;
 }
+
 .list__newTask{
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 8px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    align-items: center;
 }
 .list__buttons{
     color: white;
@@ -31,6 +33,7 @@
 .list__buttons--done{
     background-color: green;
 }
+
 .list__content--done{
     text-decoration-line: line-through;
 }
