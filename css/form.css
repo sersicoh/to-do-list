@@ -12,9 +12,16 @@
 
 .form__input {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 4fr auto;
     grid-gap: 15px;
     padding: 20px;
+}
+
+@media(max-width:767px) {
+    .form__input {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+    }
 }
 
 .form__inputBox {
@@ -24,6 +31,6 @@
 .form__button {
     background-color: teal;
     color: white;
-    padding: 8px;
+    padding: 8px 20px;
     border: none;
 }
