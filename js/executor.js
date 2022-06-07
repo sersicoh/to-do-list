@@ -1,6 +1,6 @@
 {
     const tasks = [{
-        content: "test",
+        content: "przykładowe zadanie",
     }
     ];
     const addNewTask = (newTaskContent) => {
@@ -36,6 +36,11 @@
             })
         });
     };
+    const focusNewTaskInput = () =>{
+        const newTaskContent = document.querySelector(".js-newTask");
+        newTaskContent.focus();
+        newTaskContent.value = "";
+    };
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -45,6 +50,7 @@
         }
 
         addNewTask(newTaskContent);
+        focusNewTaskInput();
     
     };
     const render = () => {
