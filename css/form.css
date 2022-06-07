@@ -1,16 +1,27 @@
-.form{
+.form {
     background-color: white;
     margin-bottom: 10px;
+    width: 100%;
 }
+
 .form__header {
     border-bottom: 1px solid #ccc;
     margin: 0;
     padding: 20px;
 }
-.form__input{
+
+.form__input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
     padding: 20px;
 }
-.form__button{
+
+.form__inputBox {
+    padding: 8px;
+}
+
+.form__button {
     background-color: teal;
     color: white;
     padding: 8px;

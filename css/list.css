@@ -12,6 +12,9 @@
     margin: 0;
 }
 .list__newTask{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 8px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
