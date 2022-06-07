@@ -49,7 +49,7 @@
         for (const task of tasks) {
 
             htmlString += `
-            <li class="newTask">
+            <li class="list__newTask">
                 <button class="js-done">Zrobione</button>
                 ${task.content}
                 <button class="js-remove">Usuń</button>
