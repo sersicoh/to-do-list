@@ -1,19 +1,17 @@
 {
-    const tasks = [{
-        content: "przykładowe zadanie",
-    }
-    ];
+    const tasks = [];
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
-            done:false,
+            done: false,
         });
         render();
     };
     const doneButtonToggle = (index) => {
         tasks[index].done = !tasks[index].done
         render();
-      };
+    };
     const checkDoneTask = () => {
 
         const doneButtons = document.querySelectorAll(".js-done");
@@ -36,7 +34,7 @@
             })
         });
     };
-    const focusNewTaskInput = () =>{
+    const focusNewTaskInput = () => {
         const newTaskContent = document.querySelector(".js-newTask");
         newTaskContent.focus();
         newTaskContent.value = "";
@@ -51,7 +49,7 @@
 
         addNewTask(newTaskContent);
         focusNewTaskInput();
-    
+
     };
     const render = () => {
         let htmlString = "";
@@ -73,12 +71,11 @@
     };
     const init = () => {
 
-        render();
-
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
 
     };
+
     init();
 }
 
